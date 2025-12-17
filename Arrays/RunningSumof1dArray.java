@@ -1,0 +1,14 @@
+package LEETCODE.Arrays;
+
+//1480
+//this is the best solution
+public class RunningSumof1dArray {
+    public int[] runningSum(int[] nums) {
+        int[] runningsum =new int[nums.length];
+        runningsum[0] = nums[0];
+        for(int i =1;i <nums.length;i++){
+            runningsum[i] = nums[i]+ runningsum[i-1];
+        }
+        return runningsum;
+    }
+}
